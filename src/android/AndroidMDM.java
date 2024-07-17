@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class AndroidMDM extends CordovaPlugin{
-    final Boolean DEBUG = BuildConfig.DEBUG;
+    final Boolean DEBUG = System.getProperty("debug.mode") == "true";
     final String TAG = "AndroidMDMPlugin";
 
     CallbackContext restrictionChangeCallbacks;
